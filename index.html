@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="py-5"  id="formulario">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <form class="">
+                <h2 class="">Calcular Aposta 50% Lucro</h2>
+                <div class="form-group"> 
+                    <label>Acumulado</label> 
+                    <input type="number" class="form-control" placeholder="Total acumulado" id ="totalAcumulado">
+                    <small class="form-text text-muted"></small> 
+                </div>
+                <div class="form-group"> 
+                    <label>Razão</label> 
+                    <input type="number" class="form-control" placeholder="Razão Aposta" id="razao"> 
+                </div> 
+              </form>
+              <button type="submit" class="btn btn-primary" id="calcular">Calcular</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="py-5 d-none text-center" id="resultado">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary" id="retornar">Voltar</button>
+              <h4 class="display-4 text-center" >Valor da Aposta</h4>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="tabela">
+                        <thead>
+                          <tr>
+                            <th>Acumulado</th>
+                            <th>Aposta</th>
+                            <th>Razão</th>
+                            <th>Prêmio</th>
+                            <th>Lucro</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="main.js" defer></script>
+</body>
+</html>

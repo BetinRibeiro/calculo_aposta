@@ -3,7 +3,7 @@ const calcularValorAposta=(razao, totalAcumulado)=> {
     return valorAposta;
 }
 const abrirformulario = () => {
-    document.getElementById('resultado').classList.add('d-none')
+//     document.getElementById('resultado').classList.add('d-none')
     document.getElementById('formulario').classList.remove('d-none')
 }
 
@@ -13,7 +13,7 @@ const formatarValor =(valor) =>{
     return String(valor)
 }
 const fecharformulario = () => {
-    document.getElementById('formulario').classList.add('d-none')
+//     document.getElementById('formulario').classList.add('d-none')
     document.getElementById('resultado').classList.remove('d-none')
 }
 

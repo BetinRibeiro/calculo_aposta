@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-    <title>Apostas</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.css">
+    <title>Document</title>
 </head>
 <body>
 
@@ -19,12 +19,10 @@
       #noprint { display:none; } 
   }
     </style>
-    <div class="py-5"  id="formulario">
-        <div class="container" id="noprint">
-          <div class="row">
-            <div class="col-md-12">
+      <div class="row m-2">
+        <div class="col-md-4 border" id="noprint" >
               <form class="">
-                <h2 class="">Calcular Aposta</h2>
+                <h4 class="">Calcular Aposta</h4>
                 <div class="form-group"> 
                     <label>Acumulado</label> 
                     <input type="number" class="form-control" placeholder="Total acumulado" id ="totalAcumulado">
@@ -39,20 +37,11 @@
                     <input type="number" class="form-control" placeholder="Lucro Estimado" id="fator"> 
                 </div> 
               </form>
-              <button type="submit" class="btn btn-primary" id="calcular">Calcular</button>
+              <button type="submit" class="btn btn-success my-2" id="calcular">Calcular</button>
+              <button type="button" class="btn btn-success my-2" onClick="window.print()">Imprimir</button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="py-1 d-none text-center" id="resultado">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-<!--                 <button type="submit" class="btn btn-primary" id="retornar">Voltar</button> -->
+            <div class="col-md-8 border">
               <h4 class="text-center" >Tabela de Aportes</h4>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="tabela">
                         <thead>
@@ -68,14 +57,8 @@
                         <tbody>
                         </tbody>
                       </table>
-                    </div>
+                    </div></div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <script src="main.js" defer></script>
 </body>
 </html>

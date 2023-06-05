@@ -34,11 +34,11 @@ const imprime_resultado = () => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
     <th>${formatarValor(totalAcumulado)}</th>
-    <th>${formatarValor(resultado)}</th>
+    <th class="text-success">${formatarValor(resultado)}</th>
     <th>${(razao)}</th>
     <th>${formatarValor(premio)}</th>
-    <th>${formatarValor(lucro)}</th>
-    <th>${formatarValor(acumuladonovo)}</th>
+    <th class="text-info">${formatarValor(lucro)}</th>
+    <th class="text-danger">${formatarValor(acumuladonovo)}</th>
     
     `
     document.querySelector('#tabela>tbody').appendChild(newRow)

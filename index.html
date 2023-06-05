@@ -4,15 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
-    <title>Document</title>
+    <title>Apostas</title>
 </head>
 <body>
+
+<style  type="text/css">
+  @media print{
+      .btn{
+           display: none;
+      }
+      .button{
+           display: none;
+      }
+      #noprint { display:none; } 
+  }
+    </style>
     <div class="py-5"  id="formulario">
-        <div class="container">
+        <div class="container" id="noprint">
           <div class="row">
             <div class="col-md-12">
               <form class="">
-                <h2 class="">Calcular Aposta 50% Lucro</h2>
+                <h2 class="">Calcular Aposta</h2>
                 <div class="form-group"> 
                     <label>Acumulado</label> 
                     <input type="number" class="form-control" placeholder="Total acumulado" id ="totalAcumulado">
@@ -22,18 +34,22 @@
                     <label>Razão</label> 
                     <input type="number" class="form-control" placeholder="Razão Aposta" id="razao"> 
                 </div> 
+                <div class="form-group"> 
+                    <label>Lucro</label> 
+                    <input type="number" class="form-control" placeholder="Lucro Estimado" id="fator"> 
+                </div> 
               </form>
               <button type="submit" class="btn btn-primary" id="calcular">Calcular</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="py-5 d-none text-center" id="resultado">
+      <div class="py-1 d-none text-center" id="resultado">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary" id="retornar">Voltar</button>
-              <h4 class="display-4 text-center" >Valor da Aposta</h4>
+              <h4 class="text-center" >Tabela de Aportes</h4>
               <div class="container">
                 <div class="row">
                   <div class="col-md-12">
@@ -46,6 +62,7 @@
                             <th>Razão</th>
                             <th>Prêmio</th>
                             <th>Lucro</th>
+                            <th>Acumulado Novo</th>
                           </tr>
                         </thead>
                         <tbody>

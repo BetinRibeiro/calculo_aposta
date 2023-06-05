@@ -30,6 +30,7 @@ const imprime_resultado = () => {
     premio=resultado*razao
     lucro=premio-totalAcumulado-resultado
     acumuladonovo=parseFloat(totalAcumulado)+parseFloat(resultado)
+    console.log(acumuladonovo);
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
     <th>${formatarValor(totalAcumulado)}</th>

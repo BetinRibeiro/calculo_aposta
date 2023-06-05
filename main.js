@@ -1,26 +1,32 @@
-const calcularValorAposta=(razao, totalAcumulado)=> {
-    var valorAposta = (2 * totalAcumulado) / (razao - 2);
+const calcularValorAposta=(razao, totalAcumulado,fator)=> {
+    var valorAposta = (fator * totalAcumulado) / (razao - 2);
     return valorAposta;
 }
 const abrirformulario = () => {
-//     document.getElementById('resultado').classList.add('d-none')
+    // document.getElementById('resultado').classList.add('d-none')
     document.getElementById('formulario').classList.remove('d-none')
 }
-
+const calcularFatorMultiplicador=(numero)=> {
+    numero = 100 - numero;
+    var valor = 1 / (numero / 100);
+    console.log(valor);
+    return valor;
+}
 const formatarValor =(valor) =>{
     var valor = valor
     valor =parseFloat(valor).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
     return String(valor)
 }
 const fecharformulario = () => {
-//     document.getElementById('formulario').classList.add('d-none')
+    // document.getElementById('formulario').classList.add('d-none')
     document.getElementById('resultado').classList.remove('d-none')
 }
 
 const imprime_resultado = () => {
     totalAcumulado= document.getElementById('totalAcumulado').value;
     razao= document.getElementById('razao').value;
-    resultado=calcularValorAposta(parseFloat(razao),parseFloat(totalAcumulado))
+    fator= document.getElementById('fator').value;
+    resultado=calcularValorAposta(parseFloat(razao),parseFloat(totalAcumulado),calcularFatorMultiplicador(parseFloat(fator)))
     premio=resultado*razao
     lucro=premio-totalAcumulado-resultado
     acumuladonovo=parseFloat(totalAcumulado)+parseFloat(resultado)
@@ -31,6 +37,7 @@ const imprime_resultado = () => {
     <th>${(razao)}</th>
     <th>${formatarValor(premio)}</th>
     <th>${formatarValor(lucro)}</th>
+    <th>${formatarValor(acumuladonovo)}</th>
     
     `
     document.querySelector('#tabela>tbody').appendChild(newRow)

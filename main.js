@@ -1,4 +1,4 @@
-a=1
+a=2
 const calcularValorAposta=(razao, totalAcumulado,fator)=> {
     var valorAposta = (fator * totalAcumulado) / (razao - 2);
     return valorAposta;

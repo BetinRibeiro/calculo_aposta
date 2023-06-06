@@ -1,3 +1,4 @@
+a=1
 const calcularValorAposta=(razao, totalAcumulado,fator)=> {
     var valorAposta = (fator * totalAcumulado) / (razao - 2);
     return valorAposta;
@@ -31,7 +32,7 @@ const imprime_resultado = () => {
     acumuladonovo=parseFloat(totalAcumulado)+parseFloat(resultado)
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
-    <th>${formatarValor(totalAcumulado)}</th>
+    <th>(${a}ª) - ${formatarValor(totalAcumulado)}</th>
     <th class="text-success">${formatarValor(resultado)}</th>
     <th>${(razao)}</th>
     <th>${formatarValor(premio)}</th>
@@ -39,6 +40,7 @@ const imprime_resultado = () => {
     <th class="text-danger">${formatarValor(acumuladonovo)} </th>
     
     `
+    a=a+1
     document.querySelector('#tabela>tbody').appendChild(newRow)
     // fecharformulario()
     document.getElementById("totalAcumulado").value = (acumuladonovo).toFixed(2).toString()
